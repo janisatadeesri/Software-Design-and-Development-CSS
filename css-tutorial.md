@@ -791,11 +791,135 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทความที่น่าสนใจ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ตั้งค่าพื้นฐาน */
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #e3f2fd;  /* สีฟ้าอ่อน */
+            color: #0d47a1; /* ฟ้าน้ำเงินเข้ม */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* คอนเทนเนอร์ของบทความ */
+        .blog-post {
+            max-width: 800px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 3px solid #42a5f5; /* กรอบสีฟ้า */
+        }
+
+        /* ส่วนหัวบทความ */
+        .post-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            font-size: 2.8rem;
+            color: #1565c0; /* ฟ้าสดใส */
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .post-meta {
+            color: #1e88e5; /* ฟ้ากลาง */
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* เนื้อหาบทความ */
+        .post-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #0d47a1; /* ฟ้าน้ำเงินเข้ม */
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* หัวข้อย่อย */
+        .post-content h2 {
+            font-size: 2rem;
+            color: #1e88e5; /* ฟ้าสด */
+            margin: 2rem 0 1rem;
+            border-left: 5px solid #1565c0; /* เส้นนำหน้าสีฟ้า */
+            padding-left: 10px;
+        }
+
+        /* Blockquote */
+        blockquote {
+            font-style: italic;
+            border-left: 5px solid #1e88e5;
+            margin: 1.5rem 0;
+            padding-left: 15px;
+            color: #0d47a1;
+            font-size: 1.3rem;
+            background: #bbdefb; /* สีฟ้าอ่อน */
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blog-post {
+                padding: 20px;
+            }
+
+            .post-title {
+                font-size: 2.2rem;
+            }
+
+            .post-content {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย ผู้เขียน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน การเขียนบทความให้น่าอ่านนั้นมีหลักการสำคัญหลายประการ</p>
+
+            <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+            <p>หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย และมีประโยชน์ต่อผู้อ่าน</p>
+
+            <blockquote>
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+            </blockquote>
+
+            <h2>2. การจัดโครงสร้างเนื้อหา</h2>
+            <p>เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ เข้าใจง่าย และมีความต่อเนื่อง</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/e91e03c3-daf6-4a03-a882-49b9f16959c7)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
