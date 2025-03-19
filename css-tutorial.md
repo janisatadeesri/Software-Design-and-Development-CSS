@@ -551,11 +551,133 @@ border: 1px solid black;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .product-card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px #05eba2;
+    background-color: white;
+    margin: 15px;
+    display: inline-block;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #0dd398;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: hsl(169, 76%, 46%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #94fd13c9;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, hwb(141 11% 20%), hsl(144, 93%, 45%));
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, hwb(139 24% 11%), hsl(117, 82%, 49%));
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+    </style>
+
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Cards</title>
+        <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="product-card">
+        <div class="product-image" style="background-image: url('img/1.webp');"></div>
+        <div class="product-info">
+            <h2 class="product-title">เสื้อครอปสีขาวแขนยาว</h2>
+            <p class="product-price">฿150</p>
+            <p class="product-description">
+                รายละเอียด ผ้าฝ้าย
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image" style="background-image: url('img/2.jpg');"></div>
+        <div class="product-info">
+            <h2 class="product-title">เสื้อแขนตุ๊กตา</h2>
+            <p class="product-price">฿200</p>
+            <p class="product-description">
+                รายละเอียด ผ้าฝ้าย
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image" style="background-image: url('img/3.jpg');"></div>
+        <div class="product-info">
+            <h2 class="product-title">เสื้อปาดไหล่</h2>
+            <p class="product-price">฿250</p>
+            <p class="product-description">
+                รายละเอียด ผ้าฝ้าย
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image" style="background-image: url('img/4.jpg');"></div>
+        <div class="product-info">
+            <h2 class="product-title">เสื้อสายเดี่ยวลายลูกไม้</h2>
+            <p class="product-price">฿360</p>
+            <p class="product-description">
+                รายละเอียด ไหมพรม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+</body>
+
+</html>
+
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/a308ea8c-b5d8-4286-a9fc-f4e09ca0e370)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
