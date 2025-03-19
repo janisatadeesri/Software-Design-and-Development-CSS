@@ -1362,9 +1362,224 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แดชบอร์ดผู้ดูแลระบบ</title>
+    <style>
+        /* ตั้งค่าพื้นฐาน */
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #e3f2fd;
+            color: #7b0505;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Layout หลัก */
+        .dashboard {
+            display: grid;
+            grid-template-areas: 
+                "sidebar header"
+                "sidebar main";
+            grid-template-columns: 240px 1fr;
+            grid-template-rows: auto 1fr;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background: #ffffff;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(188, 3, 3, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* ปุ่ม */
+        .btn {
+            background: #d022ad;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #cf4267;
+        }
+
+        .logout {
+            background: #dc3545;
+        }
+
+        .logout:hover {
+            background: #a10c40;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background: #b320ca;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 1rem;
+        }
+
+        .sidebar ul li a:hover {
+            background: #772dd1;
+            border-radius: 4px;
+            padding-left: 10px;
+        }
+
+        /* Main Content */
+        .main-content {
+            grid-area: main;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+
+        /* สถิติ */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .stat-card p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #462cbb;
+        }
+
+        /* กราฟ */
+        .chart-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+        }
+
+        .chart {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(186, 39, 208, 0.1);
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-areas: 
+                    "header"
+                    "main";
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .chart-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav>
+                <button class="btn">โปรไฟล์</button>
+                <button class="btn logout">ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>เมนู</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">🏠 หน้าแรก</a></li>
+                    <li><a href="#">📊 รายงาน</a></li>
+                    <li><a href="#">⚙️ การตั้งค่า</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขายรวม</h3>
+                    <p>฿150,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>จำนวนออเดอร์</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p>45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>📈 กราฟแสดงยอดขาย</h3>
+                </div>
+                <div class="chart">
+                    <h3>📊 สัดส่วนสินค้าขายดี</h3>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/95788795-0e10-4441-9451-f3957c787459)
 
