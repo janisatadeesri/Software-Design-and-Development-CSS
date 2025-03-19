@@ -1062,11 +1062,158 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
-```
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านค้าออนไลน์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ตั้งค่าพื้นฐาน */
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #e3f2fd; /* สีฟ้าอ่อน */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* กริดสินค้า */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* กล่องสินค้า */
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* เอฟเฟกต์ Hover */
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* รูปสินค้า */
+        .product-image {
+            width: 100%;
+            height: 160px; /* ลดขนาด */
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* รายละเอียดสินค้า */
+        .product-details {
+            padding: 10px;
+        }
+
+        /* ชื่อสินค้า */
+        .product-title {
+            font-size: 1rem;
+            margin: 5px 0;
+            color: #c91d68; /* ฟ้าน้ำเงินเข้ม */
+        }
+
+        /* ราคา */
+        .product-price {
+            font-size: 1.1rem;
+            color: #c106ab;
+            font-weight: bold;
+        }
+
+        /* ปุ่มเพิ่มลงตะกร้า */
+        .add-to-cart {
+            background-color: #f4373e;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        /* Hover ปุ่ม */
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .product-image {
+                height: 140px; /* ลดขนาดบนมือถือ */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-grid">
+        <!-- สินค้าชิ้นที่ 1 -->
+        <div class="product-card">
+            <img src="https://images.droidsans.com/wp-content/uploads/2022/11/5c390f7aca1558af0160412015c01ccd.jpg" alt="สินค้าตัวอย่างที่ 1" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">หูฟังไร้สาย</h3>
+                <div class="product-price">฿999</div>
+                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 2 -->
+        <div class="product-card">
+            <img src="https://th-test-11.slatic.net/p/e6be36bed4687ac367e3a0808beeb18e.jpg" alt="สินค้าตัวอย่างที่ 2" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">นาฬิกาอัจฉริยะ</h3>
+                <div class="product-price">฿1,299</div>
+                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 3 -->
+        <div class="product-card">
+            <img src="https://cf.shopee.co.th/file/d362aa649561e747863ab831e65aac0b" alt="สินค้าตัวอย่างที่ 3" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">กระเป๋าเดินทาง</h3>
+                <div class="product-price">฿1,599</div>
+                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 4 -->
+        <div class="product-card">
+            <img src="https://down-th.img.susercontent.com/file/83187ea639cac76fca9ffe98124d58a9" alt="สินค้าตัวอย่างที่ 4" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">รองเท้าผ้าใบ</h3>
+                <div class="product-price">฿1,199</div>
+                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
 ```css
 [วางโค้ด CSS ที่นี่]
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/2614973f-4890-4d58-a3dc-456bab0476d1)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
