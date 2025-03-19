@@ -394,11 +394,70 @@ background-size: cover;
 ### ผลการทดลอง
 ```html
 [วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สินค้า</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://bluemochateas.com/wp-content/uploads/2022/12/%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%8A%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%A2%E0%B9%87%E0%B8%99.jpg.webp" alt="สินค้า 1">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">เมนูเครื่องดื่ม1</h2>
+                <p class="product-price">฿19บาท</p>
+                <p class="product-description">ชามะลิ</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://www.bluemochatea.com/wp-content/uploads/2019/12/%E0%B9%82%E0%B8%81%E0%B9%82%E0%B8%81%E0%B9%89%E0%B8%9A%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%8B%E0%B8%A1%E0%B8%B8%E0%B8%81.jpg" alt="สินค้า 2">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">เมนูเครื่องดื่ม2</h2>
+                <p class="product-price">฿25บาท</p>
+                <p class="product-description">โกโก้ใส่ไข่มุก</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://th.bing.com/th/id/OIP.RJc30szCKGwyIe1uu4wz1wHaE8?w=1000&h=667&rs=1&pid=ImgDetMain" alt="สินค้า 3">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">เมนูเครื่องดื่ม3</h2>
+                <p class="product-price">฿45บาท</p>
+                <p class="product-description">ชากุหลาบ</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://yalamarketplace.com/upload/1647916391642.jpg" alt="สินค้า 4">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">เมนูเครื่องดื่ม4</h2>
+                <p class="product-price">฿50บาท</p>
+                <p class="product-description">ชานมไต้หวันใส่ไข่มุก</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
+![image](https://github.com/user-attachments/assets/3c909bcd-71fc-4c4e-bb0c-af558fd6d5cd)
+![image](https://github.com/user-attachments/assets/be11328f-b8f7-4307-98c0-b0037428cfff)
+![image](https://github.com/user-attachments/assets/9bc7091d-250d-4ed3-a2be-bdf83af20d5e)
+
 
 ### 4.1 หน่วยวัดและ Box Model
 ```css
